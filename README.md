@@ -1,5 +1,5 @@
 # trackercontrol-hosts
-Repozytorium dla aplikacji trackercontrol i netguard - obe aplikacje są rozwijane na serwerach GiHUB, z których możesz je bezpośrednio pobrać
+Repozytorium dla aplikacji trackercontrol i netguard - obie te aplikacje są rozwijane na serwerach GiHUB, z których możesz je bezpośrednio pobrać
 https://trackercontrol.org/
 https://netguard.me/
 Lista trackercontrol-hosts
