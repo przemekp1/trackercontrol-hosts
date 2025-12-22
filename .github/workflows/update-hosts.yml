@@ -13,18 +13,35 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install curl
-        run: sudo apt-get install -y curl
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y curl
 
       - name: Run merge script
         run: |
           chmod +x merge_hosts.sh
           ./merge_hosts.sh
 
+      - name: Count domains and generate badge
+        run: |
+          mkdir -p .badges
+          COUNT=$(grep -v '^#' hosts.txt | wc -l | tr -d ' ')
+          echo "{
+            \"schemaVersion\": 1,
+            \"label\": \"domains\",
+            \"message\": \"${COUNT}\",
+            \"color\": \"blue\"
+          }" > .badges/domains.json
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add hosts.txt
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update hosts list"
-          git push
+
+          git add hosts.txt .badges/domains.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update hosts list"
+            git push
+          fi
