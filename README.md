@@ -32,7 +32,7 @@ Lista `hosts.txt` jest tworzona na podstawie następujących źródeł:
 | **CERT.pl**     | domains_hosts v2        | kilka–kilkanaście tys.    |
 | **URLHaus**     | złośliwe hosty          | kilka–kilkanaście tys.    |
 
-➡️ **Po deduplikacji:** około **210 000 unikalnych domen**
+➡️ **Po deduplikacji: ![Domains](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/przemekp1/trackercontrol-hosts/main/.badges/domains.json) unikalnych domen**
 ➡️ **Format:** `0.0.0.0 domena`
 
 ---
