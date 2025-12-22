@@ -1,5 +1,9 @@
 # 📡 TrackerControl / NetGuard – Hosts List
 
+![Build](https://github.com/przemekp1/trackercontrol-hosts/actions/workflows/update-hosts.yml/badge.svg)
+![Last Commit](https://img.shields.io/github/last-commit/przemekp1/trackercontrol-hosts/main)
+![Domains](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/przemekp1/trackercontrol-hosts/main/.badges/domains.json)
+
 Repozytorium zawiera **zintegrowaną i automatycznie aktualizowaną listę domen** w formacie `hosts`, przeznaczoną do użycia w aplikacjach takich jak **TrackerControl** oraz **NetGuard**.
 
 Listy źródłowe pochodzą z renomowanych projektów open-source i są regularnie pobierane, łączone oraz deduplikowane przy użyciu **GitHub Actions**.
